@@ -23,11 +23,11 @@ const Header = () => (
             textDecoration: 'none',
           }}
         >
-          Gatsby
+            recursivechaos
         </Link>
       </h1>
     </div>
   </div>
-)
+);
 
 export default Header
