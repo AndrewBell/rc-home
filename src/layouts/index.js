@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import {withStyles} from 'material-ui/styles';
 import withRoot from './withRoot';
 import Grid from 'material-ui/Grid';
-import Paper from 'material-ui/Paper';
-import Typography from 'material-ui/Typography';
+import Header from '../components/header'
 
 const styles = theme => ({
     paper: {
@@ -23,13 +22,7 @@ class Index extends React.Component {
         return (
             <div className={classes.root}>
                 <Grid>
-                    <Grid item xs={12}>
-                        <Paper className={classes.paper}>
-                            <Typography className={classes.header} variant="display1">
-                                recursivechaos
-                            </Typography>
-                        </Paper>
-                    </Grid>
+                    <Header/>
                 </Grid>
             </div>
         );
