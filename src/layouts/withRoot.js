@@ -4,6 +4,8 @@ import {MuiThemeProvider} from 'material-ui/styles';
 import CssBaseline from 'material-ui/CssBaseline';
 import getPageContext from './getPageContext';
 
+// Based on the Gatbsy Material UI Example
+// https://github.com/mui-org/material-ui/tree/v1-beta/examples/gatsby
 function withRoot(Component) {
     class WithRoot extends React.Component {
         constructor(props, context) {
