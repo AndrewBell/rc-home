@@ -6,15 +6,13 @@ import blue from 'material-ui/colors/blue';
 import red from 'material-ui/colors/red';
 import grey from 'material-ui/colors/grey';
 
-// A theme with custom primary and secondary color.
-// It's optional.
+// https://material-ui-next.com/customization/default-theme/
 const theme = createMuiTheme({
     palette: {
         primary: {
             light: blue[300],
             main: blue[500],
             dark: blue[700],
-            text: grey[50],
         },
         secondary: {
             light: red[300],
@@ -22,6 +20,11 @@ const theme = createMuiTheme({
             dark: red[700],
         },
     },
+    typography: {
+        display1: {
+            color: grey[50]
+        }
+    }
 });
 
 function createPageContext() {

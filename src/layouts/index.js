@@ -11,9 +11,6 @@ const styles = theme => ({
         padding: theme.spacing.unit * 2,
         textAlign: 'left',
         background: theme.palette.primary.main,
-    },
-    header: {
-        color: theme.palette.primary.text,
     }
 });
 
