@@ -6,10 +6,9 @@
  */
 import React from 'react';
 import {withStyles} from 'material-ui/styles';
-
-import Grid from 'material-ui/Grid';
-import Paper from 'material-ui/Paper';
 import Typography from 'material-ui/Typography';
+import AppBar from 'material-ui/AppBar';
+import Toolbar from 'material-ui/Toolbar';
 
 const styles = theme => ({
     paper: {
@@ -20,13 +19,15 @@ const styles = theme => ({
 });
 
 const Header = (props) => (
-    <Grid item xs={12}>
-        <Paper className={props.classes.paper}>
-            <Typography variant="display1">
-                recursivechaos
-            </Typography>
-        </Paper>
-    </Grid>
+    <div className={props.classes.root}>
+        <AppBar position="static" color="primary">
+            <Toolbar>
+                <Typography variant="title" color="inherit">
+                    recursivechaos
+                </Typography>
+            </Toolbar>
+        </AppBar>
+    </div>
 );
 
 export default withStyles(styles)(Header)
