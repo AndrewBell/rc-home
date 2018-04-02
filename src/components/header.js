@@ -11,11 +11,7 @@ import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 
 const styles = theme => ({
-    paper: {
-        padding: theme.spacing.unit * 2,
-        textAlign: 'left',
-        background: theme.palette.primary.main,
-    }
+
 });
 
 const Header = (props) => (

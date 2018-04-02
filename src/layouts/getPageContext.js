@@ -22,7 +22,7 @@ const theme = createMuiTheme({
     },
     typography: {
         display1: {
-            color: grey[50]
+            // color: grey[50]
         }
     }
 });
