@@ -6,6 +6,8 @@ import blue from 'material-ui/colors/blue';
 import red from 'material-ui/colors/red';
 import grey from 'material-ui/colors/grey';
 
+// Based on the Gatbsy Material UI Example
+// https://github.com/mui-org/material-ui/tree/v1-beta/examples/gatsby
 // https://material-ui-next.com/customization/default-theme/
 const theme = createMuiTheme({
     palette: {
