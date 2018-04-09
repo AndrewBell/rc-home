@@ -10,13 +10,9 @@ import Typography from 'material-ui/Typography';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 
-const styles = theme => ({
-
-});
-
 const Header = (props) => (
     <div className={props.classes.root}>
-        <AppBar position="static" color="primary">
+        <AppBar position="fixed" color="primary">
             <Toolbar>
                 <Typography variant="title" color="inherit">
                     recursivechaos
@@ -26,4 +22,4 @@ const Header = (props) => (
     </div>
 );
 
-export default withStyles(styles)(Header)
+export default withStyles()(Header)

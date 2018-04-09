@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {MuiThemeProvider} from 'material-ui/styles';
 import CssBaseline from 'material-ui/CssBaseline';
 import getPageContext from './getPageContext';
+import 'typeface-roboto'
 
 // Based on the Gatbsy Material UI Example
 // https://github.com/mui-org/material-ui/tree/v1-beta/examples/gatsby
