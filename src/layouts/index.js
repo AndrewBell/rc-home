@@ -14,6 +14,10 @@ import Paper from 'material-ui/Paper';
 import Typography from 'material-ui/Typography';
 import Avatar from 'material-ui/Avatar';
 import Headshot from '../static/headshot.jpg'
+import EmailIcon from '../static/email.svg'
+import GitHubIcon from '../static/github-box.svg'
+import TwitterIcon from '../static/twitter-box.svg'
+import LinkedInIcon from '../static/linkedin-box.svg'
 import grey from "material-ui/colors/grey";
 
 const styles = theme => ({
@@ -40,6 +44,12 @@ const styles = theme => ({
     },
     title: {
         color: grey[100]
+    },
+    connectIcons: {
+        display: 'block',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        width: 40
     }
 });
 
@@ -65,11 +75,13 @@ class Index extends React.Component {
 
                 {/*About Me Panel*/}
                 <Paper className={classes.aboutPaper}>
+
                     <Typography variant='headline' align='left'>
                         About Me
                     </Typography>
+
                     <Grid container alignItems='center'>
-                        <Grid item sm={12} md={8}>
+                        <Grid item xs={12} md={8}>
                             <Typography variant='body1'>
                                 I build software with two goals in mind; delight customers and enable fellow
                                 developers. I'm passionate about writing clean and collaborative code that both
@@ -80,11 +92,36 @@ class Index extends React.Component {
                                 and build on their feedback.
                             </Typography>
                         </Grid>
-                        <Grid item sm={12} md={4}>
+                        <Grid item xs={12} md={4}>
                             <div className={classes.row}>
                                 <Avatar src={Headshot} className={classes.headshot}/>
                             </div>
                         </Grid>
+                    </Grid>
+
+                    <Grid container alignItems='center' alignContent='center' justify='center'>
+                        <Grid item xs={2}/>
+                        <Grid item xs={2}>
+                            <a href="mailto:doc@recursivechaos.com" target="_blank">
+                                <img className={classes.connectIcons} src={EmailIcon}/>
+                            </a>
+                        </Grid>
+                        <Grid item xs={2}>
+                            <a href="https://github.com/andrewbell" target="_blank">
+                                <img className={classes.connectIcons} src={GitHubIcon}/>
+                            </a>
+                        </Grid>
+                        <Grid item xs={2}>
+                            <a href="https://twitter.com/recursive_chaos" target="_blank">
+                                <img className={classes.connectIcons} src={TwitterIcon}/>
+                            </a>
+                        </Grid>
+                        <Grid item xs={2}>
+                            <a href="https://www.linkedin.com/in/recursivechaos" target="_blank">
+                                <img className={classes.connectIcons} src={LinkedInIcon}/>
+                            </a>
+                        </Grid>
+                        <Grid item xs={2}/>
                     </Grid>
                 </Paper>
             </Grid>

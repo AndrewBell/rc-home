@@ -19,3 +19,7 @@ For an overview of the project structure please refer to the [Gatsby documentati
 React components that implement Google's Material Design.
 
 https://material-ui-next.com/
+
+### Icons
+
+https://materialdesignicons.com/
