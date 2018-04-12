@@ -61,7 +61,7 @@ class AboutMe extends React.Component {
                   tools and automation to enable continuous delivery. Rapid and predictable releases
                   enable the iterative process embodied in the principles of agile. Practicing human
                   centered design has re-enforced the need to collaborate with users to understand
-                  their needs, and build on their feedback.
+                  their needs and build on their feedback.
                 </Typography>
               </Grid>
               <Grid item xs={12} md={4}>

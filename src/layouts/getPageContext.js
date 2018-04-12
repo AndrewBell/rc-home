@@ -1,10 +1,9 @@
 /* eslint-disable no-underscore-dangle */
-
 import { SheetsRegistry } from "jss";
 import { createMuiTheme, createGenerateClassName } from "material-ui/styles";
-import blue from "material-ui/colors/blue";
-import red from "material-ui/colors/red";
+import orange from "material-ui/colors/orange";
 import grey from "material-ui/colors/grey";
+import purple from "material-ui/colors/purple";
 
 // Based on the Gatbsy Material UI Example
 // https://github.com/mui-org/material-ui/tree/v1-beta/examples/gatsby
@@ -12,14 +11,18 @@ import grey from "material-ui/colors/grey";
 const theme = createMuiTheme({
   palette: {
     primary: {
-      light: blue[300],
-      main: blue[500],
-      dark: blue[700],
+      light: orange[300],
+      main: orange[500],
+      dark: orange[700],
     },
     secondary: {
-      light: red[300],
-      main: red[500],
-      dark: red[700],
+      light: purple[300],
+      main: purple[500],
+      dark: purple[700],
+    },
+    text: {
+      primary: grey[800],
+      secondary: grey[100],
     },
   },
 });
