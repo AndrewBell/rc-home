@@ -1,15 +1,14 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "rc-hom",
+  "description": "recursivechaos home",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Andrew Bell <andrew@recursivechaos.com>",
   "dependencies": {
     "gatsby": "^1.9.241",
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-react-helmet": "^2.0.8",
     "jss": "^9.8.1",
     "material-ui": "^1.0.0-beta.38",
-    "material-ui-icons": "^1.0.0-beta.36",
     "prop-types": "^15.6.1",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
@@ -17,9 +16,7 @@
     "react-jss": "^8.4.0",
     "typeface-roboto": "0.0.54"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",

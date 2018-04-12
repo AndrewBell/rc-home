@@ -4,7 +4,6 @@
  * andrew@recursivechaos.com
  * Licensed under MIT License 2018. See license.txt for details.
  */
-
 import React from "react";
 import { withStyles } from "material-ui/styles";
 import withRoot from "../layouts/withRoot";
@@ -73,7 +72,6 @@ class AboutMe extends React.Component {
             </Grid>
 
             <Grid container alignItems="center" alignContent="center" justify="center">
-              <Grid item xs={2} />
               <Grid item xs={2}>
                 <a href="mailto:doc@recursivechaos.com" target="_blank">
                   <img className={classes.connectIcons} src={EmailIcon} />
@@ -94,7 +92,6 @@ class AboutMe extends React.Component {
                   <img className={classes.connectIcons} src={LinkedInIcon} />
                 </a>
               </Grid>
-              <Grid item xs={2} />
             </Grid>
           </Paper>
         </Grid>
