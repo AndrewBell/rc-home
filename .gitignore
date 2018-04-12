@@ -9,3 +9,6 @@ yarn-error.log
 
 *.iml
 /.idea
+
+# Mac
+.DS_Store
