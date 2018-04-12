@@ -27,8 +27,6 @@ const styles = () => ({
   },
   aboutPaper: {
     marginTop: "20px",
-    marginLeft: "120px",
-    marginRight: "120px",
     padding: 20,
   },
   headshot: {
@@ -48,55 +46,59 @@ class AboutMe extends React.Component {
     const { classes } = this.props;
 
     return (
-      <Paper className={classes.aboutPaper}>
-        <Typography variant="headline" align="left">
-          About Me
-        </Typography>
-
-        <Grid container alignItems="center">
-          <Grid item xs={12} md={8}>
-            <Typography variant="body1">
-              I build software with two goals in mind; delight customers and enable fellow
-              developers. I'm passionate about writing clean and collaborative code that both solves
-              problems and matures as it grows. I strive for a DevOps mindset, using tools and
-              automation to enable continuous delivery. Rapid and predictable releases enable the
-              iterative process embodied in the principles of agile. Practicing human centered
-              design has re-enforced the need to collaborate with users to understand their needs,
-              and build on their feedback.
+      <Grid container justify="center">
+        <Grid item xs={10} sm={9} md={8} lg={7}>
+          <Paper className={classes.aboutPaper}>
+            <Typography variant="headline" align="left">
+              About Me
             </Typography>
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <div className={classes.row}>
-              <Avatar src={Headshot} className={classes.headshot} />
-            </div>
-          </Grid>
-        </Grid>
 
-        <Grid container alignItems="center" alignContent="center" justify="center">
-          <Grid item xs={2} />
-          <Grid item xs={2}>
-            <a href="mailto:doc@recursivechaos.com" target="_blank">
-              <img className={classes.connectIcons} src={EmailIcon} />
-            </a>
-          </Grid>
-          <Grid item xs={2}>
-            <a href="https://github.com/andrewbell" target="_blank">
-              <img className={classes.connectIcons} src={GitHubIcon} />
-            </a>
-          </Grid>
-          <Grid item xs={2}>
-            <a href="https://twitter.com/recursive_chaos" target="_blank">
-              <img className={classes.connectIcons} src={TwitterIcon} />
-            </a>
-          </Grid>
-          <Grid item xs={2}>
-            <a href="https://www.linkedin.com/in/recursivechaos" target="_blank">
-              <img className={classes.connectIcons} src={LinkedInIcon} />
-            </a>
-          </Grid>
-          <Grid item xs={2} />
+            <Grid container alignItems="center">
+              <Grid item xs={12} md={8}>
+                <Typography variant="body1">
+                  I build software with two goals in mind; delight customers and enable fellow
+                  developers. I'm passionate about writing clean and collaborative code that both
+                  solves problems and matures as it grows. I strive for a DevOps mindset, using
+                  tools and automation to enable continuous delivery. Rapid and predictable releases
+                  enable the iterative process embodied in the principles of agile. Practicing human
+                  centered design has re-enforced the need to collaborate with users to understand
+                  their needs, and build on their feedback.
+                </Typography>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <div className={classes.row}>
+                  <Avatar src={Headshot} className={classes.headshot} />
+                </div>
+              </Grid>
+            </Grid>
+
+            <Grid container alignItems="center" alignContent="center" justify="center">
+              <Grid item xs={2} />
+              <Grid item xs={2}>
+                <a href="mailto:doc@recursivechaos.com" target="_blank">
+                  <img className={classes.connectIcons} src={EmailIcon} />
+                </a>
+              </Grid>
+              <Grid item xs={2}>
+                <a href="https://github.com/andrewbell" target="_blank">
+                  <img className={classes.connectIcons} src={GitHubIcon} />
+                </a>
+              </Grid>
+              <Grid item xs={2}>
+                <a href="https://twitter.com/recursive_chaos" target="_blank">
+                  <img className={classes.connectIcons} src={TwitterIcon} />
+                </a>
+              </Grid>
+              <Grid item xs={2}>
+                <a href="https://www.linkedin.com/in/recursivechaos" target="_blank">
+                  <img className={classes.connectIcons} src={LinkedInIcon} />
+                </a>
+              </Grid>
+              <Grid item xs={2} />
+            </Grid>
+          </Paper>
         </Grid>
-      </Paper>
+      </Grid>
     );
   }
 }
