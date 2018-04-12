@@ -6,6 +6,10 @@
 
 `npm run develop`
 
+## Deploy
+
+`npm run build`
+
 ## Built With
 
 ### gatsby-starter-default
