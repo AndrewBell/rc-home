@@ -1,11 +1,12 @@
 {
-  "name": "rc-hom",
+  "name": "rc-home",
   "description": "recursivechaos home",
   "version": "1.0.0",
   "author": "Andrew Bell <andrew@recursivechaos.com>",
   "dependencies": {
     "gatsby": "^1.9.241",
     "gatsby-link": "^1.6.39",
+    "gatsby-plugin-netlify": "^1.0.19",
     "gatsby-plugin-react-helmet": "^2.0.8",
     "jss": "^9.8.1",
     "material-ui": "^1.0.0-beta.38",

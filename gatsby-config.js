@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'recursivechaos home',
+    title: "recursivechaos home",
   },
-  plugins: ['gatsby-plugin-react-helmet'],
+  plugins: ["gatsby-plugin-react-helmet", "gatsby-plugin-netlify"],
 };
