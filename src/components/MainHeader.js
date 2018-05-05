@@ -24,11 +24,11 @@ class MainHeader extends React.Component {
 
     return (
       <div className={classes.mainHeader}>
-        <Typography variant="display3" align="center">
+        <Typography variant="display3" align="center" color="textSecondary">
           Andrew 'Doc' Bell
-          <Typography variant="headline" align="center" color="inherit">
-            Developer, Mentor, Creator
-          </Typography>
+        </Typography>
+        <Typography variant="headline" align="center" color="textSecondary">
+          Developer, Mentor, Creator
         </Typography>
       </div>
     );
