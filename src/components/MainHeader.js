@@ -4,7 +4,6 @@
  * andrew@recursivechaos.com
  * Licensed under MIT License 2018. See license.txt for details.
  */
-
 import React from "react";
 import { withStyles } from "material-ui/styles";
 import withRoot from "../layouts/withRoot";
