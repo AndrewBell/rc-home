@@ -6,13 +6,12 @@
  */
 import React from "react";
 import withRoot from "./withRoot";
-import AppBar from "../components/AppBar";
+import ResponsiveDrawer from "../components/ResponsiveDrawer";
 
 const Index = ({ children }) => {
   return (
     <div>
-      <AppBar />
-      {children()}
+      <ResponsiveDrawer content={children()} />
     </div>
   );
 };
