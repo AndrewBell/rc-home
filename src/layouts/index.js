@@ -6,7 +6,7 @@
  */
 import React from "react";
 import withRoot from "./withRoot";
-import ResponsiveDrawer from "../components/ResponsiveDrawer";
+import ResponsiveDrawer from "../components/AppBarAndDrawer";
 
 const Index = ({ children }) => {
   return (

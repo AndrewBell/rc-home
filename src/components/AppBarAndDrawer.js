@@ -7,10 +7,14 @@ import Toolbar from "material-ui/Toolbar";
 import Typography from "material-ui/Typography";
 import IconButton from "material-ui/IconButton";
 import Hidden from "material-ui/Hidden";
-import Divider from "material-ui/Divider";
+import ListItemIcon from "material-ui/List/ListItemIcon";
+import ListItem from "material-ui/List/ListItem";
+import ListItemText from "material-ui/List/ListItemText";
 
 import FontAwesomeIcon from "@fortawesome/react-fontawesome";
 import faFlask from "@fortawesome/fontawesome-free-solid/faFlask";
+import faEdit from "@fortawesome/fontawesome-free-solid/faEdit";
+import faHome from "@fortawesome/fontawesome-free-solid/faHome";
 
 // Based on Material-UI Responsive Example https://material-ui.com/demos/drawers/#responsive-drawer
 
@@ -28,11 +32,6 @@ const styles = theme => ({
     position: "fixed",
     zIndex: theme.zIndex.drawer + 1,
     color: theme.palette.text.secondary,
-  },
-  navIconHide: {
-    [theme.breakpoints.up("md")]: {
-      display: "none",
-    },
   },
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
@@ -56,7 +55,7 @@ const styles = theme => ({
   },
 });
 
-class ResponsiveDrawer extends React.Component {
+class AppBarAndDrawer extends React.Component {
   state = {
     mobileOpen: false,
   };
@@ -70,13 +69,24 @@ class ResponsiveDrawer extends React.Component {
 
     const drawer = (
       <div>
-        <div className={classes.toolbar} />
-        <Divider />
+        <ListItem button>
+          <ListItemIcon>
+            <FontAwesomeIcon icon={faHome} />
+          </ListItemIcon>
+          <ListItemText primary="Home" />
+        </ListItem>
+        <ListItem button>
+          <ListItemIcon>
+            <FontAwesomeIcon icon={faEdit} />
+          </ListItemIcon>
+          <ListItemText primary="Blog" />
+        </ListItem>
       </div>
     );
 
     return (
       <div className={classes.root}>
+        {/*App Bar*/}
         <AppBar className={classes.appBar}>
           <Toolbar>
             <IconButton onClick={this.handleDrawerToggle} className={classes.appIcon}>
@@ -87,6 +97,8 @@ class ResponsiveDrawer extends React.Component {
             </Typography>
           </Toolbar>
         </AppBar>
+
+        {/* Mobile Hidden Drawer*/}
         <Hidden mdUp>
           <Drawer
             variant="temporary"
@@ -99,21 +111,26 @@ class ResponsiveDrawer extends React.Component {
             {drawer}
           </Drawer>
         </Hidden>
+
+        {/*Desktop Pinned Drawer*/}
         <Hidden smDown implementation="css">
           <Drawer variant="permanent" open classes={{ paper: classes.drawerPaper }}>
+            <div className={classes.toolbar} />
             {drawer}
           </Drawer>
         </Hidden>
+
+        {/*Content injected here*/}
         <main className={classes.content}>{content}</main>
       </div>
     );
   }
 }
 
-ResponsiveDrawer.propTypes = {
+AppBarAndDrawer.propTypes = {
   classes: PropTypes.object.isRequired,
   theme: PropTypes.object.isRequired,
   content: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles, { withTheme: true })(ResponsiveDrawer);
+export default withStyles(styles, { withTheme: true })(AppBarAndDrawer);
