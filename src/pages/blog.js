@@ -5,27 +5,60 @@
  * Licensed under MIT License 2018. See license.txt for details.
  */
 import React from "react";
+import { withStyles } from "material-ui/styles";
+import { Grid, Paper, Typography } from "material-ui";
+import PropTypes from "prop-types";
+import withRoot from "../layouts/withRoot";
 
-export default ({ data }) => (
-  <div>
-    <h1 display={"inline-block"} borderBottom={"1px solid"}>
-      Amazing Pandas Eating Things
-    </h1>
-    <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+const styles = theme => ({
+  header: {
+    marginTop: "80px",
+    color: theme.palette.text.primary,
+  },
+  count: {
+    color: theme.palette.text.primary,
+  },
+  paperContent: {
+    marginTop: "20px",
+    padding: 20,
+  },
+  body: {
+    marginBottom: 20,
+  },
+});
+
+const BlogIndex = ({ data, classes }) => (
+  <Grid container justify="center" className={classes.body}>
+    <Grid item xs={10} sm={9} md={8} lg={7}>
+      <Typography variant="display3" className={classes.header}>
+        Blog Posts
+      </Typography>
+    </Grid>
+
+    <Grid item xs={10} sm={9} md={8} lg={7}>
+      <Typography variant="headline">{data.allMarkdownRemark.totalCount} Posts</Typography>
+    </Grid>
+
     {data.allMarkdownRemark.edges.map(({ node }) => (
-      <div key={node.id}>
-        <h3>
-          {node.frontmatter.title} <span color="#BBB">— {node.frontmatter.date}</span>
-        </h3>
-        <p>{node.excerpt}</p>
-        <a href={node.frontmatter.path}>Link</a>
-      </div>
+      <Grid item xs={10} sm={9} md={8} lg={7} key={node.id}>
+        <Paper className={classes.paperContent}>
+          <a href={node.frontmatter.path}>
+            <Typography variant="headline" gutterBottom>
+              {node.frontmatter.title}
+            </Typography>
+          </a>
+          <Typography variant="subheading" gutterBottom>
+            {node.frontmatter.date}
+          </Typography>
+          <Typography variant="body1">{node.excerpt}</Typography>
+        </Paper>
+      </Grid>
     ))}
-  </div>
+  </Grid>
 );
 
 export const query = graphql`
-  query IndexQuery {
+  query BlogIndexQuery {
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       totalCount
       edges {
@@ -33,7 +66,7 @@ export const query = graphql`
           id
           frontmatter {
             title
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "MMMM DD, YYYY")
             path
           }
           excerpt
@@ -42,3 +75,10 @@ export const query = graphql`
     }
   }
 `;
+
+BlogIndex.propTypes = {
+  classes: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
+};
+
+export default withRoot(withStyles(styles)(BlogIndex));
