@@ -69,13 +69,13 @@ class AppBarAndDrawer extends React.Component {
 
     const drawer = (
       <div>
-        <ListItem button>
+        <ListItem button component="a" href="/">
           <ListItemIcon>
             <FontAwesomeIcon icon={faHome} />
           </ListItemIcon>
           <ListItemText primary="Home" />
         </ListItem>
-        <ListItem button>
+        <ListItem button component="a" href="/blog">
           <ListItemIcon>
             <FontAwesomeIcon icon={faEdit} />
           </ListItemIcon>
