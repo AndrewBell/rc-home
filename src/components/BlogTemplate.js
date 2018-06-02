@@ -1,20 +1,43 @@
+/**
+ * Created by Andrew Bell 5/02/18
+ * www.recursivechaos.com
+ * andrew@recursivechaos.com
+ * Licensed under MIT License 2018. See license.txt for details.
+ */
 import React from "react";
+import { withStyles } from "material-ui/styles/index";
+import { Grid, Paper, Typography } from "material-ui";
+import PropTypes from "prop-types";
 
-// Based on a Gatsby Example: https://www.gatsbyjs.org/docs/adding-markdown-pages/
+const styles = theme => ({
+  body: {
+    marginTop: 100,
+    marginBottom: 20,
+  },
+  contentPaper: {
+    marginTop: "20px",
+    padding: 20,
+  },
+});
 
-export default function Template({ data }) {
-  const { markdownRemark } = data; // data.markdownRemark holds our post data
+const BlogTemplate = ({ data, classes }) => {
+  const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
+
   return (
-    <div className="blog-post-container">
-      <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
-        <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: html }} />
-      </div>
-    </div>
+    <Grid container className={classes.body} justify="center">
+      <Grid item xs={10} sm={9} md={8} lg={7}>
+        <Paper className={classes.contentPaper}>
+          <Typography variant="headline">{frontmatter.title}</Typography>
+          <Typography variant="subheading" gutterBottom>
+            {frontmatter.date}
+          </Typography>
+          <Typography variant="body1" dangerouslySetInnerHTML={{ __html: html }} />
+        </Paper>
+      </Grid>
+    </Grid>
   );
-}
+};
 
 export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
@@ -28,3 +51,10 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+BlogTemplate.propTypes = {
+  classes: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(BlogTemplate);

@@ -43,9 +43,7 @@ const BlogIndex = ({ data, classes }) => (
       <Grid item xs={10} sm={9} md={8} lg={7} key={node.id}>
         <Paper className={classes.paperContent}>
           <a href={node.frontmatter.path}>
-            <Typography variant="headline" gutterBottom>
-              {node.frontmatter.title}
-            </Typography>
+            <Typography variant="headline">{node.frontmatter.title}</Typography>
           </a>
           <Typography variant="subheading" gutterBottom>
             {node.frontmatter.date}
