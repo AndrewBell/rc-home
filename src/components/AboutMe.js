@@ -38,6 +38,9 @@ const styles = () => ({
     marginRight: "auto",
     width: 40,
   },
+  content: {
+    marginBottom: 20,
+  },
 });
 
 class AboutMe extends React.Component {
@@ -45,7 +48,7 @@ class AboutMe extends React.Component {
     const { classes } = this.props;
 
     return (
-      <Grid container justify="center">
+      <Grid container justify="center" className={classes.content}>
         <Grid item xs={10} sm={9} md={8} lg={7}>
           <Paper className={classes.aboutPaper}>
             <Typography variant="headline" align="left">
