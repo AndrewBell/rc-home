@@ -48,6 +48,9 @@ const BlogIndex = ({ data, classes }) => (
           <Typography variant="subheading" gutterBottom>
             {node.frontmatter.date}
           </Typography>
+          <Typography variant="subheading" gutterBottom>
+            {node.frontmatter.tags}
+          </Typography>
           <Typography variant="body1">{node.excerpt}</Typography>
         </Paper>
       </Grid>
@@ -66,6 +69,7 @@ export const query = graphql`
             title
             date(formatString: "MMMM DD, YYYY")
             path
+            tags
           }
           excerpt
         }

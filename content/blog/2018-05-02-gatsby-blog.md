@@ -2,6 +2,7 @@
 path: /blog/gatsby-blog
 title: Building a Blog with Gatsby
 date: 2018-05-01
+tags: welcome
 ---
 
 Recently I decided to drop Wordpress, and roll my own website and blog. I've been experimenting with Gatsby with great success.
