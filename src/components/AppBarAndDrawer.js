@@ -75,12 +75,6 @@ class AppBarAndDrawer extends React.Component {
           </ListItemIcon>
           <ListItemText primary="Home" />
         </ListItem>
-        <ListItem button component="a" href="/blog">
-          <ListItemIcon>
-            <FontAwesomeIcon icon={faEdit} />
-          </ListItemIcon>
-          <ListItemText primary="Blog" />
-        </ListItem>
       </div>
     );
 
