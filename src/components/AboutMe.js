@@ -58,7 +58,19 @@ class AboutMe extends React.Component {
             <Grid container alignItems="center">
               <Grid item xs={12} md={8}>
                 <Typography variant="body1">
-                  I build software with two goals in mind; delight customers and enable fellow
+
+....................../´¯/) 
+....................,/¯../ 
+.................../..../ 
+............./´¯/'...'/´¯¯`·¸ 
+........../'/.../..../......./¨¯\ 
+........('(...´...´.... ¯~/'...') 
+.........\.................'...../ 
+..........''...\.......... _.·´ 
+............\..............( 
+..............\.............\...            
+      
+      I build software with two goals in mind; delight customers and enable fellow
                   developers. I'm passionate about writing clean and collaborative code that both
                   solves problems and matures as it grows. I strive for a DevOps mindset, using
                   tools and automation to enable continuous delivery. Rapid and predictable releases
