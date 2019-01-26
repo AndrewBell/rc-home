@@ -34,18 +34,9 @@ const styles = theme => ({
     color: theme.palette.text.secondary,
   },
   toolbar: theme.mixins.toolbar,
-  drawerPaper: {
-    width: drawerWidth,
-    [theme.breakpoints.up("md")]: {
-      position: "fixed",
-    },
-  },
   content: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.default,
-    [theme.breakpoints.up("md")]: {
-      paddingLeft: drawerWidth,
-    },
   },
   appIcon: {
     color: theme.palette.text.secondary,
@@ -83,36 +74,12 @@ class AppBarAndDrawer extends React.Component {
         {/*App Bar*/}
         <AppBar className={classes.appBar}>
           <Toolbar>
-            <IconButton onClick={this.handleDrawerToggle} className={classes.appIcon}>
-              <FontAwesomeIcon icon={faFlask} />
-            </IconButton>
+            <FontAwesomeIcon icon={faFlask} />
             <Typography variant="title" color="inherit" noWrap>
               &nbsp;recursivechaos labs
             </Typography>
           </Toolbar>
         </AppBar>
-
-        {/* Mobile Hidden Drawer*/}
-        <Hidden mdUp>
-          <Drawer
-            variant="temporary"
-            anchor={theme.direction === "rtl" ? "right" : "left"}
-            open={this.state.mobileOpen}
-            onClose={this.handleDrawerToggle}
-            classes={{ paper: classes.drawerPaper }}
-            ModalProps={{ keepMounted: true }}
-          >
-            {drawer}
-          </Drawer>
-        </Hidden>
-
-        {/*Desktop Pinned Drawer*/}
-        <Hidden smDown implementation="css">
-          <Drawer variant="permanent" open classes={{ paper: classes.drawerPaper }}>
-            <div className={classes.toolbar} />
-            {drawer}
-          </Drawer>
-        </Hidden>
 
         {/*Content injected here*/}
         <main className={classes.content}>{content}</main>

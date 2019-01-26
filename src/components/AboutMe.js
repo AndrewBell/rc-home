@@ -54,6 +54,7 @@ class AboutMe extends React.Component {
             <Typography variant="headline" align="left">
               About Me
             </Typography>
+            <br />
 
             <Grid container alignItems="center">
               <Grid item xs={12} md={8}>
@@ -62,10 +63,18 @@ class AboutMe extends React.Component {
                   developers. I'm passionate about writing clean and collaborative code that both
                   solves problems and matures as it grows. I strive for a DevOps mindset, using
                   tools and automation to enable continuous delivery. Rapid and predictable releases
-                  enable the iterative process embodied in the principles of agile. Practicing human
-                  centered design has re-enforced the need to collaborate with users to understand
-                  their needs and build on their feedback.
+                  enable the iterative process embodied in the principles of agile. Practicing
+                  human-centered design has reinforced the need to collaborate with users to
+                  understand their needs and iterate on their feedback.
                 </Typography>
+                <br />
+                <Typography variant="body1">
+                  I am passionate about building welcoming and inclusive communities of developers.
+                  I believe the best ideas come from a diversity of perspectives, and by creating
+                  supportive spaces for developers to grow and share their ideas we can build
+                  something greater than the sum of its parts.
+                </Typography>
+                <br />
               </Grid>
               <Grid item xs={12} md={4}>
                 <div className={classes.row}>
@@ -75,22 +84,22 @@ class AboutMe extends React.Component {
             </Grid>
 
             <Grid container alignItems="center" alignContent="center" justify="center">
-              <Grid item xs={2}>
+              <Grid item xs={3} lg={2}>
                 <a href="mailto:doc@recursivechaos.com" target="_blank">
                   <img className={classes.connectIcons} src={EmailIcon} />
                 </a>
               </Grid>
-              <Grid item xs={2}>
+              <Grid item xs={3} lg={2}>
                 <a href="https://github.com/andrewbell" target="_blank">
                   <img className={classes.connectIcons} src={GitHubIcon} />
                 </a>
               </Grid>
-              <Grid item xs={2}>
+              <Grid item xs={3} lg={2}>
                 <a href="https://twitter.com/recursive_chaos" target="_blank">
                   <img className={classes.connectIcons} src={TwitterIcon} />
                 </a>
               </Grid>
-              <Grid item xs={2}>
+              <Grid item xs={3} lg={2}>
                 <a href="https://www.linkedin.com/in/recursivechaos" target="_blank">
                   <img className={classes.connectIcons} src={LinkedInIcon} />
                 </a>
